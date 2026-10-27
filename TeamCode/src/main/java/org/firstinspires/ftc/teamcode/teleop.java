@@ -14,6 +14,9 @@ public class teleop extends LinearOpMode {
     DcMotor r2;
     DcMotor l1;
     DcMotor l2;
+    DcMotor intake;
+    DcMotor shoot;
+
     double SpeedMultiplier = 0.75;
 
     @Override
@@ -23,6 +26,8 @@ public class teleop extends LinearOpMode {
         r2 = hardwareMap.get(DcMotor.class,"r2");
         l1 = hardwareMap.get(DcMotor.class,"l1");
         l2 = hardwareMap.get(DcMotor.class,"l2");
+        intake = hardwareMap.get(DcMotor.class,"intake");
+        shoot = hardwareMap.get(DcMotor.class,"shoot");
 
         waitForStart();
         while(!isStopRequested()) {
@@ -116,7 +121,22 @@ public class teleop extends LinearOpMode {
                 r2.setPower(0);
                 l1.setPower(0);
                 l2.setPower(-0);
+
+
+            }
+
+            if (gamepad1.right_trigger_pressed) {
+                intake.setPower(1);
+            } else {
+                intake.setPower(0);
+            }
+            if (gamepad1.left_trigger_pressed) {
+                shoot.setPower(1);
+            } else {
+                shoot.setPower(0);
             }
         }
     }
+
+
 }
