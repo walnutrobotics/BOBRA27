@@ -126,7 +126,7 @@ public class teleop extends LinearOpMode {
             }
 
             if (gamepad1.right_trigger_pressed) {
-                intake.setPower(1);
+                intake.setPower(-1);
             } else {
                 intake.setPower(0);
             }
