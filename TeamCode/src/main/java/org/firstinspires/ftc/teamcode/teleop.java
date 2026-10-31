@@ -29,6 +29,11 @@ public class teleop extends LinearOpMode {
         intake = hardwareMap.get(DcMotor.class,"intake");
         shoot = hardwareMap.get(DcMotor.class,"shoot");
 
+        r1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        r2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        l1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        l2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
         waitForStart();
         while(!isStopRequested()) {
             //drive code forward and back
