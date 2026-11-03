@@ -103,6 +103,19 @@ public class teleop extends LinearOpMode {
                 l1.setPower(0);
                 l2.setPower(0);
             }
+          /*
+            //testing the new turn way
+            if (gamepad1.left_stick_x<0) {
+                r1.setPower(-1);
+                r2.setPower(1);
+                l1.setPower(-1);
+                l2.setPower(1);
+            } else {
+                r1.setPower(0);
+                r2.setPower(0);
+                l1.setPower(0);
+                l2.setPower(0);
+            */
             //right turn dpad
             if (gamepad1.dpad_right) {
                 r1.setPower(1);
@@ -126,10 +139,23 @@ public class teleop extends LinearOpMode {
                 r2.setPower(0);
                 l1.setPower(0);
                 l2.setPower(-0);
+            }
+                /*
+            //testing the new turn way
+            if (gamepad1.right_stick_x<0) {
+                r1.setPower(1);
+                r2.setPower(-1);
+                l1.setPower(1);
+                l2.setPower(-1);
+            } else {
+                r1.setPower(0);
+                r2.setPower(0);
+                l1.setPower(0);
+                l2.setPower(0);
 
 
             }
-
+            */
             if (gamepad1.right_trigger_pressed) {
                 intake.setPower(-1);
             } else {
